@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <title>Hikmal Apriansyah — Malzx Official</title>
+  <meta name="description" content="Portofolio Hikmal Apriansyah, siswa XI PPLG 1 SMK PGRI 1 Cimahi yang tertarik pada web development, programming, dan cyber security.">
+  <meta name="author" content="Hikmal Apriansyah">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph: preview saat link dibagikan ke WhatsApp dan media sosial -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Malzx Official">
+  <meta property="og:title" content="Hikmal Apriansyah — Malzx Official">
+  <meta property="og:description" content="Student • Web Developer • Cyber Security Enthusiast | Cimahi, Jawa Barat">
+  <meta property="og:url" content="https://malzx-official.my.id/">
+  <meta property="og:image" content="https://malzx-official.my.id/assets/og-preview.png">
+  <meta property="og:image:secure_url" content="https://malzx-official.my.id/assets/og-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Malzx Official — Hikmal Apriansyah, dark monochrome developer portfolio">
+  <meta property="og:locale" content="id_ID">
+
+  <!-- Twitter / X card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hikmal Apriansyah — Malzx Official">
+  <meta name="twitter:description" content="Student • Web Developer • Cyber Security Enthusiast | Cimahi, Jawa Barat">
+  <meta name="twitter:image" content="https://malzx-official.my.id/assets/og-preview.png">
+
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg:#050505; --card:#0b0b0b; --white:#f5f5f5;
+      --gray:#999; --border:rgba(255,255,255,.12);
+      --glow:0 0 25px rgba(255,255,255,.09);
+      --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+      --sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{background:var(--bg);color:var(--white);font-family:var(--sans);line-height:1.7;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.075),transparent 55%),linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:auto,45px 45px,45px 45px}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .icon{display:block;width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+    .brand-icon{width:22px;height:22px;display:block;flex-shrink:0}
+    .btn .icon{width:15px;height:15px}
+    .social-shortcuts a{display:inline-flex;align-items:center;gap:8px}
+    .info-icon svg{width:17px;height:17px}
+    .interest-icon{height:28px;display:flex;align-items:center;margin-bottom:17px;color:#eee}
+    .interest-icon svg{width:27px;height:27px}
+    .project-preview svg{width:42px;height:42px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+    .social-icon{width:40px;height:40px;display:grid;place-items:center;flex-shrink:0;border:1px solid var(--border);border-radius:8px;color:#fff}
+    .social-icon svg{width:22px;height:22px;display:block}
+    .social-card .arrow{width:15px;height:15px;display:block;margin-left:auto;color:#888;flex-shrink:0}
+    .menu-btn{display:none;align-items:center;gap:8px}
+    .container{width:min(1080px,90%);margin:auto}
+    header{position:sticky;top:0;z-index:100;background:rgba(5,5,5,.84);backdrop-filter:blur(18px);border-bottom:1px solid var(--border)}
+    .navbar{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .logo{font:700 13px var(--mono);letter-spacing:1.8px}.logo span{color:#888}
+    .nav-links{display:flex;align-items:center;gap:24px}
+    .nav-links a{color:#999;font:11px var(--mono);transition:.25s}
+    .nav-links a:hover{color:#fff;text-shadow:0 0 12px #fff}
+    .menu-btn{display:none;background:none;border:1px solid var(--border);color:#fff;padding:8px 12px;cursor:pointer}
+    .hero{min-height:calc(100svh - 74px);display:flex;justify-content:center;align-items:center;padding:78px 0 65px;text-align:center}
+    .hero-content{max-width:800px;width:100%}
+    .system-status{display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid var(--border);background:#ffffff06;border-radius:30px;color:#aaa;font:10px var(--mono);margin-bottom:31px}
+    .status-dot{width:7px;height:7px;border-radius:50%;background:#eee;box-shadow:0 0 12px #fff;animation:pulse 2s infinite}
+    @keyframes pulse{50%{opacity:.35}}
+    .profile-wrapper{width:150px;height:150px;margin:0 auto 29px;position:relative}
+    .profile-wrapper:before{content:"";position:absolute;inset:-8px;border-radius:50%;border:1px solid #ffffff35;box-shadow:0 0 30px #ffffff12;animation:ring 12s linear infinite}
+    .profile-wrapper:after{content:"";position:absolute;inset:-14px;border-radius:50%;border:1px dashed #ffffff16;animation:ring 24s linear infinite reverse}
+    @keyframes ring{to{transform:rotate(360deg)}}
+    .profile-photo,.profile-placeholder{width:100%;height:100%;border-radius:50%;border:2px solid #ffffffa8;box-shadow:0 0 30px #ffffff1f;object-fit:cover;background:#111}
+    .profile-photo{display:none}.profile-photo.loaded{display:block}
+    .profile-placeholder{display:flex;align-items:center;justify-content:center;background:radial-gradient(circle,#292929,#080808 72%);font:40px var(--mono)}
+    .profile-placeholder.hidden{display:none}
+    h1{font-size:clamp(32px,7vw,64px);line-height:1.15;letter-spacing:-2px;font-weight:800;margin-bottom:15px}
+    h1 span{color:#aaa}
+    .hero-subtitle{color:#999;font-size:13px;margin-bottom:25px}
+    .hero-subtitle strong{color:#eee;font-weight:500}
+    .terminal{width:min(540px,100%);margin:27px auto;text-align:left;background:#0c0c0cdd;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:var(--glow)}
+    .terminal-top{padding:11px 15px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px;color:#777;font:10px var(--mono)}
+    .terminal-title{margin:0 auto}
+    .window-dot{width:8px;height:8px;border-radius:50%;background:#555}
+    .terminal-body{padding:18px 20px;font:12px/2 var(--mono);overflow-wrap:anywhere}
+    .prompt{color:#fff}.terminal-muted{color:#888}.typing{color:#ddd;min-height:24px}
+    .cursor{display:inline-block;width:7px;height:13px;vertical-align:middle;background:#fff;animation:blink 1s steps(2) infinite}
+    @keyframes blink{50%{opacity:0}}
+    .buttons,.contact-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .btn{padding:11px 18px;border:1px solid #ffffff40;font:10px var(--mono);letter-spacing:.4px;display:inline-flex;align-items:center;justify-content:center;gap:9px;transition:.25s;cursor:pointer}
+    .btn-primary{background:#f5f5f5;color:#080808;border-color:#fff;font-weight:700}
+    .btn-secondary{background:#ffffff06}
+    .btn:hover{box-shadow:0 0 22px #ffffff2b;transform:translateY(-3px)}
+    .social-shortcuts{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .social-shortcuts a{font:10px var(--mono);color:#aaa;border:1px solid var(--border);background:#ffffff04;padding:8px 12px;border-radius:5px;transition:.25s}
+    .social-shortcuts a:hover{color:#fff;border-color:#ffffff70;box-shadow:0 0 18px #ffffff14;transform:translateY(-2px)}
+    .scroll-hint{margin-top:54px;color:#666;font:10px var(--mono);letter-spacing:2px}
+    section.content-section{padding:86px 0}
+    .section-heading{margin-bottom:34px}
+    .section-label{font:10px var(--mono);color:#888;letter-spacing:2px;margin-bottom:9px}
+    .section-heading h2{font-size:clamp(26px,4vw,37px);letter-spacing:-1px;line-height:1.25}
+    .section-heading>p{color:var(--gray);margin-top:10px;max-width:600px;font-size:13px}
+    .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}
+    .card{background:linear-gradient(145deg,#101010,#080808);border:1px solid var(--border);padding:26px;border-radius:12px;transition:.25s}
+    .card:hover{border-color:#ffffff50;box-shadow:var(--glow);transform:translateY(-3px)}
+    .card h3{font-size:16px;margin-bottom:13px}
+    .card p{color:#aaa;font-size:13px;line-height:1.9}
+    .info-list{display:grid;gap:17px}
+    .info-item{display:flex;gap:12px;align-items:flex-start}
+    .info-icon{width:35px;height:35px;display:grid;place-items:center;flex-shrink:0;border:1px solid var(--border);border-radius:8px;font:13px var(--mono)}
+    .info-item small{display:block;color:#777;font-size:10px;letter-spacing:.5px}
+    .info-item strong{display:block;font-size:12px;font-weight:500}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+    .interest-card{background:var(--card);border:1px solid var(--border);padding:22px 18px;border-radius:10px;transition:.25s}
+    .interest-card:hover{border-color:#ffffff55;box-shadow:var(--glow);transform:translateY(-4px)}
+    .interest-icon{font:24px var(--mono);margin-bottom:17px;color:#eee}
+    .interest-card h3{font-size:14px;margin-bottom:8px}
+    .interest-card p{font-size:11px;color:#888;line-height:1.8}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+    .project-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:.25s}
+    .project-card:hover{border-color:#ffffff55;box-shadow:var(--glow);transform:translateY(-4px)}
+    .project-preview{min-height:150px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at center,#202020,#080808 70%);border-bottom:1px solid var(--border);font:27px var(--mono);color:#ddd}
+    .project-content{padding:21px}.project-content h3{font-size:15px;margin-bottom:7px}.project-content p{font-size:12px;color:#888;margin-bottom:13px}
+    .tag{display:inline-block;padding:4px 8px;border:1px solid var(--border);border-radius:4px;color:#aaa;font:9px var(--mono);margin:3px 3px 0 0}
+    .goal-list{display:grid;gap:14px}.goal{display:flex;align-items:flex-start;gap:12px;color:#bbb;font-size:12px}.goal span{color:#fff;font-family:var(--mono)}
+    .contact-box{border:1px solid var(--border);border-radius:14px;padding:45px 24px;text-align:center;background:radial-gradient(ellipse at top,#161616,#080808 75%)}
+    .contact-box h2{font-size:clamp(26px,4vw,37px);margin-bottom:10px}.contact-box p{color:#999;font-size:13px;max-width:520px;margin:auto}
+    .social-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px;text-align:left}
+    .social-card{display:flex;align-items:center;gap:13px;padding:17px;border:1px solid var(--border);background:#ffffff04;border-radius:9px;transition:.25s;min-width:0}
+    .social-card:hover{border-color:#ffffff65;box-shadow:var(--glow);transform:translateY(-3px)}
+    .social-icon{width:40px;height:40px;display:grid;place-items:center;flex-shrink:0;border:1px solid var(--border);border-radius:8px;font:15px var(--mono);color:#fff}
+    .social-card small{display:block;font:9px var(--mono);color:#777;letter-spacing:1px}
+    .social-card strong{display:block;font-size:12px;overflow-wrap:anywhere}
+    .social-card .arrow{margin-left:auto;color:#888}
+    footer{border-top:1px solid var(--border);padding:23px 0;color:#777;font:9px var(--mono)}
+    .footer-content{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:760px){
+      .navbar{min-height:65px}.menu-btn{display:block}
+      .nav-links{display:none;position:absolute;top:65px;left:0;width:100%;padding:20px 5%;background:#050505f7;border-bottom:1px solid var(--border);flex-direction:column;align-items:flex-start;gap:18px}
+      .nav-links.open{display:flex}
+      .hero{min-height:auto;padding:75px 0 55px}.profile-wrapper{width:128px;height:128px}
+      h1{letter-spacing:-1px}.hero-subtitle{font-size:11px}
+      .terminal-body{padding:15px;font-size:10px}
+      section.content-section{padding:67px 0}
+      .about-grid,.project-grid{grid-template-columns:1fr}
+      .social-grid{grid-template-columns:1fr}
+      .grid-4{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+      .interest-card{padding:18px 14px}.card{padding:21px}.scroll-hint{margin-top:42px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="container navbar">
+    <a href="#home" class="logo">MALZX<span> OFFICIAL</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka navigasi" aria-expanded="false">MENU <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#interests">INTERESTS</a><a href="#projects">PROJECTS</a><a href="#contact">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="system-status"><span class="status-dot"></span> SYSTEM ONLINE</div>
+
+      <div class="profile-wrapper">
+        <!-- Taruh foto profil bernama profile.jpg di folder assets -->
+        <img id="profilePhoto" class="profile-photo" src="/assets/profile.jpg" alt="Foto profil Hikmal Apriansyah">
+        <div class="profile-placeholder" id="profilePlaceholder">HA</div>
+      </div>
+
+      <h1>HIKMAL <span>APRIANSYAH</span></h1>
+      <p class="hero-subtitle"><strong>Student</strong> / <strong>Web Developer</strong> / <strong>Cyber Security Enthusiast</strong></p>
+
+      <div class="terminal">
+        <div class="terminal-top"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span><span class="terminal-title">hikmal@malzx: ~</span></div>
+        <div class="terminal-body">
+          <div><span class="prompt">hikmal@malzx:~$</span> whoami</div>
+          <div class="terminal-muted">Hikmal Apriansyah</div>
+          <div><span class="prompt">hikmal@malzx:~$</span> location</div>
+          <div class="terminal-muted">Cimahi, West Java, Indonesia</div>
+          <div><span class="prompt">hikmal@malzx:~$</span> interests</div>
+          <div class="typing" id="typingText"></div>
+          <div><span class="prompt">hikmal@malzx:~$</span> <span class="cursor"></span></div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="#projects" class="btn btn-primary"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg> VIEW PROJECTS</a>
+        <a href="#about" class="btn btn-secondary"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c.6-3.5 3.1-5.5 7-5.5s6.4 2 7 5.5"/></svg> ABOUT ME</a>
+      </div>
+      <div class="social-shortcuts" aria-label="Social media">
+        <a href="https://instagram.com/malz_nothuman" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.7" cy="6.5" r="1.1" fill="currentColor"/></svg> INSTAGRAM <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a href="https://t.me/m4lzfck" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.7 4.2 18.5 20c-.2 1.1-.8 1.4-1.7.9l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.2L6.4 13.9 1.7 12.4c-1-.3-1-1 .2-1.5L20.3 3.8c.9-.3 1.7.2 1.4.4Z"/></svg> TELEGRAM <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a href="https://wa.me/62881011132277" target="_blank" rel="noopener noreferrer"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2a9.7 9.7 0 0 0-8.3 14.7L2.4 22l5.2-1.3A9.8 9.8 0 1 0 12 2.2Zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 19.9Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.6c-.1-.2 0-.3.1-.4l.4-.5.2-.4c.1-.1 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4a9 9 0 0 0 3.5 3.1c.5.2.9.4 1.2.5.5.2 1 .2 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3Z"/></svg> WHATSAPP <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+      <div class="scroll-hint">SCROLL TO EXPLORE</div>
+    </div>
+  </section>
+
+  <section class="content-section" id="about">
+    <div class="container">
+      <div class="section-heading reveal">
+        <div class="section-label">// 01 — ABOUT ME</div>
+        <h2>Kenalan, yuk.</h2>
+        <p>Sedikit tentang diri saya, pendidikan, dan perjalanan mengenal dunia teknologi.</p>
+      </div>
+      <div class="about-grid">
+        <div class="card reveal">
+          <h3>Halo, saya Hikmal.</h3>
+          <p>Saya Hikmal Apriansyah, seorang siswa kelas XI PPLG 1 di SMK PGRI 1 Cimahi, yang berasal dari Cimahi, Jawa Barat.<br><br>
+          Saya tertarik dengan dunia teknologi, khususnya pengembangan website, pemrograman, dan cyber security. Saya senang mempelajari cara kerja aplikasi, sistem, serta teknologi yang digunakan dalam kehidupan digital.<br><br>
+          Saat ini saya terus belajar, mencoba berbagai hal baru, dan mengembangkan project sebagai bagian dari perjalanan saya di dunia teknologi informasi.</p>
+        </div>
+        <div class="card reveal">
+          <h3>Personal Information</h3>
+          <div class="info-list">
+            <div class="info-item"><div class="info-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><small>LOCATION</small><strong>Cimahi, Jawa Barat, Indonesia</strong></div></div>
+            <div class="info-item"><div class="info-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-5 9 5-9 5-9-5Z"/><path d="M6 11v5c3.5 3 8.5 3 12 0v-5M21 9v6"/></svg></div><div><small>SCHOOL</small><strong>SMK PGRI 1 Cimahi</strong></div></div>
+            <div class="info-item"><div class="info-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h4"/></svg></div><div><small>CLASS</small><strong>XI PPLG 1</strong></div></div>
+            <div class="info-item"><div class="info-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><div><small>FOCUS</small><strong>Programming & Cyber Security</strong></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="interests">
+    <div class="container">
+      <div class="section-heading reveal">
+        <div class="section-label">// 02 — AREAS OF INTEREST</div>
+        <h2>Things I Like to Explore.</h2>
+        <p>Bidang teknologi yang menarik perhatian saya dan ingin terus saya pelajari.</p>
+      </div>
+      <div class="grid-4">
+        <article class="interest-card reveal"><div class="interest-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div><h3>Web Development</h3><p>Mempelajari cara membangun website yang menarik, responsif, dan fungsional.</p></article>
+        <article class="interest-card reveal"><div class="interest-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 20 6v5c0 5-3.4 8.3-8 10-4.6-1.7-8-5-8-10V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Cyber Security</h3><p>Mengenal keamanan sistem dan aplikasi serta mempelajari identifikasi kerentanan secara etis.</p></article>
+        <article class="interest-card reveal"><div class="interest-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m7 9 3 3-3 3M13 15h4"/></svg></div><h3>Linux</h3><p>Mengeksplorasi lingkungan Linux dan command line untuk memahami sistem operasi.</p></article>
+        <article class="interest-card reveal"><div class="interest-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="m10.8 7.2-4.5 8.5M13.2 7.2l4.5 8.5M7.5 18h9"/></svg></div><h3>Networking</h3><p>Mempelajari dasar jaringan komputer dan bagaimana perangkat saling berkomunikasi.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="goals">
+    <div class="container">
+      <div class="about-grid">
+        <div class="section-heading reveal">
+          <div class="section-label">// 03 — MY GOALS</div>
+          <h2>Always Learning.<br>Always Building.</h2>
+          <p>Saya percaya kemampuan berkembang melalui proses belajar, latihan, dan keberanian untuk mencoba.</p>
+        </div>
+        <div class="card reveal">
+          <div class="goal-list">
+            <div class="goal"><span>[01]</span><div>Memperdalam pemahaman cyber security secara etis.</div></div>
+            <div class="goal"><span>[02]</span><div>Mengembangkan keterampilan pemrograman dan web development.</div></div>
+            <div class="goal"><span>[03]</span><div>Membuat project digital yang kreatif dan bermanfaat.</div></div>
+            <div class="goal"><span>[04]</span><div>Terus mengeksplorasi teknologi baru dan mengembangkan diri.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section" id="projects">
+    <div class="container">
+      <div class="section-heading reveal">
+        <div class="section-label">// 04 — SELECTED WORKS</div>
+        <h2>My Projects.</h2>
+        <p>Project yang saya buat atau kembangkan. Bagian ini bisa diperbarui seiring bertambahnya karya.</p>
+      </div>
+      <div class="project-grid">
+        <article class="project-card reveal">
+          <div class="project-preview"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="7" width="38" height="34" rx="4"/><path d="M5 15h38M12 11h.1M17 11h.1M22 11h.1M16 23l-5 5 5 5M32 23l5 5-5 5M27 21l-5 15"/></svg></div>
+          <div class="project-content"><h3>Personal Portfolio</h3><p>Website portofolio untuk memperkenalkan diri, menampilkan minat, dan mendokumentasikan project.</p><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JAVASCRIPT</span></div>
+        </article>
+        <article class="project-card reveal">
+          <div class="project-preview"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="6" width="36" height="36" rx="5"/><path d="M6 16h36M12 11h.1M17 11h.1M14 24h20M14 30h13M14 36h17"/></svg></div>
+          <div class="project-content"><h3>Web Tools Collection</h3><p>Konsep katalog tools digital dengan antarmuka sederhana dan navigasi yang mudah digunakan.</p><span class="tag">WEB</span><span class="tag">TOOLS</span><span class="tag">DEVELOPMENT</span></div>
+        </article>
+      </div>
+      <p class="reveal" style="color:#666;font-size:11px;margin-top:17px">Catatan: kartu project ini contoh tampilan. Ganti sesuai project yang benar-benar sudah dibuat.</p>
+    </div>
+  </section>
+
+  <section class="content-section" id="contact">
+    <div class="container">
+      <div class="contact-box reveal">
+        <div class="section-label">// 05 — CONTACT</div>
+        <h2>Let's Connect.</h2>
+        <p>Punya ide project, ingin berdiskusi tentang teknologi, atau ingin berkolaborasi? Pilih platform di bawah untuk menghubungi saya.</p>
+        <div class="social-grid">
+          <a class="social-card" href="https://instagram.com/malz_nothuman" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.7" cy="6.5" r="1.1" fill="currentColor"/></svg></span><span><small>INSTAGRAM</small><strong>@malz_nothuman</strong></span><svg class="arrow icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="social-card" href="https://t.me/m4lzfck" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.7 4.2 18.5 20c-.2 1.1-.8 1.4-1.7.9l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-4.9 8.9-8c.4-.4-.1-.6-.6-.2L6.4 13.9 1.7 12.4c-1-.3-1-1 .2-1.5L20.3 3.8c.9-.3 1.7.2 1.4.4Z"/></svg></span><span><small>TELEGRAM</small><strong>@m4lzfck</strong></span><svg class="arrow icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="social-card" href="https://wa.me/62881011132277" target="_blank" rel="noopener noreferrer">
+            <span class="social-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2.2a9.7 9.7 0 0 0-8.3 14.7L2.4 22l5.2-1.3A9.8 9.8 0 1 0 12 2.2Zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3.1.8.8-3-.2-.3A8 8 0 1 1 12 19.9Zm4.4-6c-.2-.1-1.4-.7-1.6-.8-.2-.1-.4-.1-.5.1l-.7.8c-.1.2-.3.2-.5.1a6.5 6.5 0 0 1-1.9-1.2 7 7 0 0 1-1.3-1.6c-.1-.2 0-.3.1-.4l.4-.5.2-.4c.1-.1 0-.3 0-.4l-.7-1.7c-.2-.4-.4-.4-.5-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4a9 9 0 0 0 3.5 3.1c.5.2.9.4 1.2.5.5.2 1 .2 1.4.1.4-.1 1.4-.6 1.6-1.1.2-.5.2-1 .1-1.1-.1-.1-.3-.2-.5-.3Z"/></svg></span><span><small>WHATSAPP</small><strong>Chat langsung</strong></span><svg class="arrow icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <span>© <span id="year"></span> HIKMAL APRIANSYAH</span>
+    <span>MALZX-OFFICIAL.MY.ID</span>
+    <span>BUILT WITH CURIOSITY.</span>
+  </div>
+</footer>
+
+<script>
+  const phrases = ["Web Development", "Cyber Security", "Linux & Networking", "Programming"];
+  const typingElement = document.getElementById("typingText");
+  let phraseIndex = 0, charIndex = 0, deleting = false;
+
+  function typeEffect() {
+    const phrase = phrases[phraseIndex];
+    if (!deleting) {
+      typingElement.textContent = phrase.slice(0, ++charIndex);
+      if (charIndex === phrase.length) {
+        deleting = true;
+        setTimeout(typeEffect, 1250);
+        return;
+      }
+    } else {
+      typingElement.textContent = phrase.slice(0, --charIndex);
+      if (charIndex === 0) {
+        deleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+      }
+    }
+    setTimeout(typeEffect, deleting ? 38 : 78);
+  }
+  typeEffect();
+
+  const menuBtn = document.getElementById("menuBtn");
+  const navLinks = document.getElementById("navLinks");
+  menuBtn.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+  });
+  document.querySelectorAll(".nav-links a").forEach(link => link.addEventListener("click", () => {
+    navLinks.classList.remove("open");
+    menuBtn.setAttribute("aria-expanded", "false");
+  }));
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+  const photo = document.getElementById("profilePhoto");
+  const placeholder = document.getElementById("profilePlaceholder");
+  function showPhoto() {
+    photo.classList.add("loaded");
+    placeholder.classList.add("hidden");
+  }
+  photo.addEventListener("load", showPhoto);
+  photo.addEventListener("error", () => {
+    photo.classList.remove("loaded");
+    placeholder.classList.remove("hidden");
+  });
+  if (photo.complete && photo.naturalWidth > 0) showPhoto();
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
